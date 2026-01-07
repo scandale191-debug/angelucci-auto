@@ -1,50 +1,27 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>Angelucci Domenico - Auto</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>AngelucciAuto | Auto Usate</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="top-info">
-  <div>
-    ✉ info@angelucciauto.it &nbsp;&nbsp; ☎ +39 06 6615 2690
-  </div>
-  <div class="top-links">
-    <a href="#">News</a> |
-    <a href="#">Area Commercianti</a>
-  </div>
-</div>
+<header class="header">
+  <div class="logo">AngelucciAuto</div>
+  <select id="filtroMarca">
+    <option value="all">Tutte le marche</option>
+    <option value="Fiat">Fiat</option>
+    <option value="Toyota">Toyota</option>
+    <option value="Volkswagen">Volkswagen</option>
+  </select>
+</header>
 
-<!-- LOGO -->
-<div class="logo-bar">
-  <img src="https://i.imgur.com/0Z8FQyK.png" alt="Angelucci Domenico">
-</div>
+<main class="container" id="lista-auto">
+  <!-- le auto vengono inserite da JavaScript -->
+</main>
 
-<!-- MENU -->
-<nav class="menu">
-  <a href="#">HOME</a>
-  <a href="#">LISTA VEICOLI</a>
-  <a href="#">SERVIZIO AUTORIZZATO LANCIA</a>
-  <a href="#">GPL E METANO</a>
-  <a href="#">ACQUISTIAMO USATO</a>
-  <a href="#">ASSISTENZA</a>
-  <a href="#">CONTATTI</a>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <img src="https://images.unsplash.com/photo-1549921296-3a6b3c70c22a" alt="Auto">
-  </div>
-  <div class="hero-right">
-    <img src="https://i.imgur.com/B4H6L7A.jpg" alt="Attestato">
-  </div>
-</section>
-
+<script src="script.js"></script>
 </body>
 </html>
 
