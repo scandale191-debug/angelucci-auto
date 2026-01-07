@@ -45,3 +45,41 @@ filtro.addEventListener("change", e => {
 });
 
 mostraAuto();
+.hero {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
