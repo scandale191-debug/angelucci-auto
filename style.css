@@ -1,9 +1,9 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  color: #333;
 }
 
-/* barra sopra */
 .top-bar {
   background: #eee;
   padding: 6px 20px;
@@ -12,13 +12,11 @@ body {
   justify-content: space-between;
 }
 
-/* header */
 .header {
-  background: #fff;
   padding: 10px 20px;
+  background: #fff;
 }
 
-/* menu */
 .menu {
   background: #c40000;
   display: flex;
@@ -32,22 +30,17 @@ body {
   font-weight: bold;
 }
 
-.menu a:hover,
-.menu a.active {
+.menu a:hover {
   background: #a00000;
 }
 
-/* hero */
 .hero {
   height: 420px;
-  background: linear-gradient(
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.4)
-  ),
-  url("https://dummyimage.com/1600x800/333/fff") center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              linear-gradient(120deg, #444, #111);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .hero-content {
@@ -55,22 +48,73 @@ body {
   text-align: center;
 }
 
-.hero-content h1 {
+.hero h1 {
   font-size: 48px;
-  margin: 0;
 }
 
-.hero-content p {
-  font-size: 20px;
-  margin: 15px 0;
-}
-
-.hero-btn {
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
   background: #c40000;
   color: white;
-  padding: 12px 25px;
   text-decoration: none;
-  font-size: 18px;
   border-radius: 4px;
+}
+
+.btn.red {
+  background: #c40000;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section.light {
+  background: #f4f4f4;
+}
+
+.cars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.car {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.car-img {
+  height: 160px;
+  background: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.car-info {
+  padding: 15px;
+}
+
+.price {
+  color: #c40000;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
