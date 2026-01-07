@@ -2,26 +2,50 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>AngelucciAuto | Auto Usate</title>
+  <title>AngelucciAuto | Auto Usate Roma</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- BARRA ALTA -->
+<div class="top-bar">
+  <span>📧 info@angelucciauto.it</span>
+  <span>📞 +39 06 6615 2690</span>
+</div>
+
+<!-- HEADER -->
 <header class="header">
-  <div class="logo">AngelucciAuto</div>
-  <select id="filtroMarca">
-    <option value="all">Tutte le marche</option>
-    <option value="Fiat">Fiat</option>
-    <option value="Toyota">Toyota</option>
-    <option value="Volkswagen">Volkswagen</option>
-  </select>
+  <div class="logo">
+    <svg width="260" height="60" viewBox="0 0 260 60">
+      <text x="0" y="42" font-size="38" font-weight="bold" fill="#000">
+        Angelucci
+      </text>
+      <text x="150" y="42" font-size="28" fill="#c40000">
+        Auto
+      </text>
+      <path d="M10 50 Q130 10 250 50" stroke="#c40000" stroke-width="3" fill="none"/>
+    </svg>
+  </div>
 </header>
 
-<main class="container" id="lista-auto">
-  <!-- le auto vengono inserite da JavaScript -->
-</main>
+<!-- MENU -->
+<nav class="menu">
+  <a href="index.html" class="active">HOME</a>
+  <a href="#">LISTA VEICOLI</a>
+  <a href="#">NOI ACQUISTIAMO AUTO</a>
+  <a href="#">CONTATTI</a>
+</nav>
 
-<script src="script.js"></script>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Auto Usate Garantite</h1>
+    <p>Qualità, affidabilità e trasparenza dal 1990</p>
+    <a href="#" class="hero-btn">Vedi Auto Disponibili</a>
+  </div>
+</section>
+
 </body>
 </html>
+
 
