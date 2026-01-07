@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>AngelucciAuto | Auto Usate Roma</title>
+  <title>AngelucciAuto | Auto Usate</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,53 +16,49 @@
 <!-- HEADER -->
 <header class="header">
   <div class="logo">
-    <div class="logo">
-  <span class="logo-main">Angelucci</span>
-  <span class="logo-sub">Auto</span>
-</div>
-
+    <span class="logo-main">Angelucci</span><span class="logo-sub">Auto</span>
+  </div>
 </header>
 
 <!-- MENU -->
 <nav class="menu">
-  <a href="#home">Home</a>
+  <a href="#" class="active">Home</a>
   <a href="#veicoli">Lista Veicoli</a>
   <a href="#acquisto">Noi Acquistiamo Auto</a>
   <a href="#contatti">Contatti</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-slider">
-    <img class="hero-slide active" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." />
-    <img class="hero-slide" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." />
-    <img class="hero-slide" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." />
+<!-- HERO CON CAROSELLO -->
+<section class="hero">
+  <div class="slides">
+    <div class="slide active"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
   </div>
 
-  <div class="hero-overlay">
+  <div class="hero-content">
     <h1>Auto Usate Garantite</h1>
-    <p>Selezionate, controllate e pronte alla consegna</p>
-    <a href="#veicoli" class="btn">Vedi Auto Disponibili</a>
+    <p>Controllate, selezionate e pronte alla consegna</p>
+    <a href="#veicoli" class="btn">Scopri le Auto</a>
   </div>
 </section>
 
-
-<!-- LISTA VEICOLI -->
+<!-- LISTA AUTO -->
 <section class="section" id="veicoli">
-  <h2>Auto Disponibili</h2>
+  <h2>Auto in Vendita</h2>
 
   <div class="cars">
     <div class="car">
-      <div class="car-img">FIAT PANDA</div>
+      <div class="car-img panda"></div>
       <div class="car-info">
-        <h3>Fiat Panda 1.0 Hybrid</h3>
+        <h3>Fiat Panda Hybrid</h3>
         <p>2021 • 45.000 km • Benzina</p>
         <div class="price">€ 8.900</div>
       </div>
     </div>
 
     <div class="car">
-      <div class="car-img">TOYOTA YARIS</div>
+      <div class="car-img yaris"></div>
       <div class="car-info">
         <h3>Toyota Yaris Hybrid</h3>
         <p>2020 • 38.000 km • Ibrida</p>
@@ -71,7 +67,7 @@
     </div>
 
     <div class="car">
-      <div class="car-img">FIAT 500</div>
+      <div class="car-img fiat500"></div>
       <div class="car-info">
         <h3>Fiat 500 Lounge</h3>
         <p>2019 • 52.000 km • Benzina</p>
@@ -84,8 +80,8 @@
 <!-- ACQUISTO AUTO -->
 <section class="section light" id="acquisto">
   <h2>Noi Acquistiamo la tua Auto</h2>
-  <p>Valutazione immediata, pagamento veloce, zero stress.</p>
-  <a href="#contatti" class="btn red">Contattaci Ora</a>
+  <p>Valutazione rapida, pagamento immediato.</p>
+  <a href="#contatti" class="btn red">Contattaci</a>
 </section>
 
 <!-- CONTATTI -->
@@ -97,11 +93,10 @@
   <p>📧 info@angelucciauto.it</p>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   © 2026 AngelucciAuto – Tutti i diritti riservati
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
-
