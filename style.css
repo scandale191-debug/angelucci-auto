@@ -1,7 +1,23 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #eee;
+  padding: 6px 20px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LOGO */
 .logo {
   font-size: 34px;
   font-weight: bold;
-  letter-spacing: 1px;
+  padding: 15px 20px;
 }
 
 .logo-main {
@@ -13,25 +29,7 @@
   margin-left: 6px;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-.top-bar {
-  background: #eee;
-  padding: 6px 20px;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.header {
-  padding: 10px 20px;
-  background: #fff;
-}
-
+/* MENU */
 .menu {
   background: #c40000;
   display: flex;
@@ -45,31 +43,74 @@ body {
   font-weight: bold;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu a.active {
   background: #a00000;
 }
 
+/* HERO */
 .hero {
+  position: relative;
   height: 420px;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              linear-gradient(120deg, #444, #111);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+}
+
+.slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide:nth-child(1) {
+  background-image: linear-gradient(120deg, #444, #111);
+}
+
+.slide:nth-child(2) {
+  background-image: linear-gradient(120deg, #555, #222);
+}
+
+.slide:nth-child(3) {
+  background-image: linear-gradient(120deg, #666, #333);
+}
+
+.slide.active {
+  opacity: 1;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.hero h1 {
+.hero-content h1 {
   font-size: 48px;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin: 15px 0;
 }
 
 .btn {
-  display: inline-block;
-  margin-top: 20px;
   padding: 12px 25px;
   background: #c40000;
   color: white;
@@ -77,10 +118,7 @@ body {
   border-radius: 4px;
 }
 
-.btn.red {
-  background: #c40000;
-}
-
+/* SEZIONI */
 .section {
   padding: 60px 20px;
   text-align: center;
@@ -90,6 +128,7 @@ body {
   background: #f4f4f4;
 }
 
+/* AUTO */
 .cars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -106,13 +145,21 @@ body {
 }
 
 .car-img {
-  height: 160px;
-  background: #333;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.car-img.panda {
+  background-image: linear-gradient(135deg, #999, #666);
+}
+
+.car-img.yaris {
+  background-image: linear-gradient(135deg, #888, #555);
+}
+
+.car-img.fiat500 {
+  background-image: linear-gradient(135deg, #777, #444);
 }
 
 .car-info {
@@ -126,10 +173,10 @@ body {
   margin-top: 10px;
 }
 
+/* FOOTER */
 .footer {
   background: #111;
   color: white;
   text-align: center;
   padding: 20px;
 }
-
