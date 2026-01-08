@@ -1,18 +1,21 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ================= TOP BAR ================= */
 .top-bar {
-  background: #eee;
+  background: #eeeeee;
   padding: 6px 20px;
   display: flex;
   justify-content: space-between;
   font-size: 14px;
 }
 
+/* ================= HEADER ================= */
 .header {
   background: #777;
   padding: 10px 20px;
@@ -22,25 +25,26 @@
   height: 70px;
 }
 
+/* ================= MENU ================= */
 .menu {
-  background: #e00000;
+  background: #d32f2f;
   display: flex;
   justify-content: center;
 }
 
 .menu a {
-  color: white;
+  color: #ffffff;
   padding: 15px 20px;
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.3s;
 }
 
-.menu a.active,
 .menu a:hover {
-  background: #b00000;
+  background: #b71c1c;
 }
 
-/* HERO */
+/* ================= HERO / CAROSELLO ================= */
 .hero {
   position: relative;
   height: 420px;
@@ -64,7 +68,7 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.45);
   color: white;
   display: flex;
   flex-direction: column;
@@ -74,74 +78,124 @@
 
 .hero-overlay h1 {
   font-size: 42px;
+  margin-bottom: 10px;
 }
 
-.search-horizontal {
+.hero-overlay p {
+  font-size: 18px;
+}
+
+/* ================= SEZIONE VEICOLI ================= */
+.vehicle-section {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 30px;
+  padding: 40px;
+  background: #ffffff;
+}
+
+/* MENU VEICOLI VERTICALE */
+.vehicle-menu {
+  width: 260px;
+  background: #f5f5f5;
   padding: 20px;
-  background: #f2f2f2;
-  justify-content: center;
+  border-radius: 6px;
 }
 
-.search-horizontal select,
-.search-horizontal button {
+.vehicle-menu h3 {
+  margin-bottom: 15px;
+}
+
+.vehicle-menu select,
+.vehicle-menu button {
+  width: 100%;
+  margin-bottom: 10px;
   padding: 8px;
+  font-size: 14px;
 }
 
-.search-horizontal button {
-  background: #e00000;
+.vehicle-menu button {
+  background: #d32f2f;
   color: white;
   border: none;
+  cursor: pointer;
 }
 
-/* AUTO */
-.cars {
-  padding: 40px;
+.vehicle-menu button:hover {
+  background: #b71c1c;
 }
 
-.car-grid {
+/* AUTO IN VENDITA */
+.vehicle-list {
+  flex: 1;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 20px;
 }
 
-.car img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+.vehicle-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fafafa;
 }
 
-/* SERVIZI */
-.services {
-  display: flex;
-  gap: 20px;
-  padding: 40px;
-  justify-content: center;
-}
-
-.service {
-  width: 260px;
-  text-align: center;
-}
-
-.service img {
+.vehicle-card img {
   width: 100%;
   height: 160px;
   object-fit: cover;
 }
 
-/* FOOTER */
+.vehicle-card h4 {
+  padding: 10px 10px 0;
+}
+
+.vehicle-card p {
+  padding: 5px 10px 15px;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+/* ================= CONTATTI (TUO STILE) ================= */
+.contacts-section {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.contacts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/* ================= FOOTER ================= */
 .footer {
   background: #111;
   color: white;
   text-align: center;
   padding: 30px;
+  font-size: 14px;
 }
 
-.small {
-  font-size: 12px;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .vehicle-section {
+    flex-direction: column;
+  }
+
+  .vehicle-menu {
+    width: 100%;
+  }
+
+  .contacts-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 
