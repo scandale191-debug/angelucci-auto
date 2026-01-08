@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Angelucci Auto | Auto Usate Roma</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,9 +14,12 @@
   <span>+39 06 6615 2690</span>
 </div>
 
-<!-- HEADER + LOGO -->
+<!-- HEADER -->
 <header class="header">
-  <img src="https://i.imgur.com/4QZ7Z9K.png" alt="Angelucci Auto">
+  <div class="logo">
+    <!-- Sostituisci src con il tuo logo -->
+    <img src="https://i.imgur.com/4QZ7Z9K.png" alt="Angelucci Auto">
+  </div>
 </header>
 
 <!-- MENU -->
@@ -28,70 +31,36 @@
   <a href="#">Contatti</a>
 </nav>
 
-<!-- CAROSELLO -->
+<!-- HERO / CAROSELLO -->
 <section class="hero">
-  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1549924231-f129b911e442')"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1617814076467-7f4e7e8cfc1e')"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8')"></div>
+  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1549924231-f129b911e442');"></div>
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1617814076467-7f4e7e8cfc1e');"></div>
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8');"></div>
+
+  <div class="hero-overlay">
+    <h1>Auto Usate Garantite</h1>
+    <p>Qualità, sicurezza e assistenza completa</p>
+  </div>
 </section>
 
-<!-- RICERCA VEICOLI -->
-<section class="content">
-  <aside class="search">
-    <h3>Ricerca veicoli</h3>
-
-    <label>Condizioni</label>
-    <select><option>Seleziona</option></select>
-
-    <label>Marchio</label>
-    <select><option>Seleziona</option></select>
-
-    <label>Modello</label>
-    <select><option>Selezionare prima una marca</option></select>
-
-    <label>Alimentazione</label>
-    <select><option>Seleziona</option></select>
-
-    <div class="row">
-      <div>
-        <label>Prezzo da</label>
-        <select><option>Seleziona</option></select>
-      </div>
-      <div>
-        <label>Prezzo a</label>
-        <select><option>Seleziona</option></select>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <label>Anno da</label>
-        <select><option>Seleziona</option></select>
-      </div>
-      <div>
-        <label>Anno a</label>
-        <select><option>Seleziona</option></select>
-      </div>
-    </div>
-
-    <div class="row">
-      <div>
-        <label>Km da</label>
-        <select><option>Seleziona</option></select>
-      </div>
-      <div>
-        <label>Km a</label>
-        <select><option>Seleziona</option></select>
-      </div>
-    </div>
-
-    <button>🔍 20 Veicoli</button>
-  </aside>
+<!-- RICERCA VEICOLI ORIZZONTALE -->
+<section class="search-horizontal">
+  <select><option>Condizione</option></select>
+  <select><option>Marchio</option></select>
+  <select><option>Modello</option></select>
+  <select><option>Alimentazione</option></select>
+  <select><option>Prezzo da</option></select>
+  <select><option>Prezzo a</option></select>
+  <select><option>Anno da</option></select>
+  <select><option>Anno a</option></select>
+  <select><option>Km da</option></select>
+  <select><option>Km a</option></select>
+  <button>🔍 20 Veicoli</button>
 </section>
 
 <!-- AUTO IN VENDITA -->
 <section class="cars">
-  <h2>Auto in vendita</h2>
+  <h2>Auto in Vendita</h2>
 
   <div class="car-grid">
     <div class="car">
@@ -135,25 +104,28 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER (COME IL TUO CODICE) -->
 <footer class="footer">
-  <img src="https://i.imgur.com/4QZ7Z9K.png">
-
   <p><strong>Assistenza e uffici</strong><br>
-  Via della Pisana, 313 – Roma<br>
-  Tel: +39 06 6615 2690<br>
-  Email: info@angelucciauto.it</p>
+    Via della Pisana, 313 – Roma<br>
+    Tel: +39 06 6615 2690<br>
+    Email: info@angelucciauto.it
+  </p>
+
+  <p><strong>Esposizione auto</strong><br>
+    Via dei Trivulzio, 9 – Roma<br>
+    Solo su appuntamento
+  </p>
 
   <p class="small">
-    Privacy | Cookie Policy | Impostazioni cookie
+    Privacy Policy | Cookie Policy | Impostazioni Cookie
   </p>
 </footer>
-
-<a href="https://wa.me/393333402341" class="whatsapp" target="_blank">💬</a>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
