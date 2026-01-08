@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>AngelucciAuto | Auto Usate Garantite</title>
+  <title>Angelucci Auto | Auto Usate Roma</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,26 +10,25 @@
 
 <!-- TOP BAR -->
 <div class="top-bar">
-  <span>📧 info@angelucciauto.it</span>
-  <span>📞 +39 06 6615 2690</span>
+  <span>info@angelucciauto.it</span>
+  <span>+39 06 6615 2690</span>
 </div>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">
-    <img src="https://i.imgur.com/4QZ7Z9K.png" alt="AngelucciAuto">
-  </div>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Lista Veicoli</a>
-    <a href="#">Noi Acquistiamo Auto Roma</a>
-    <a href="#">Assistenza</a>
-    <a href="#">Contatti</a>
-  </nav>
+<!-- HEADER + LOGO -->
+<header class="header">
+  <img src="https://i.imgur.com/4QZ7Z9K.png" alt="Angelucci Auto">
 </header>
 
-<!-- HERO CAROSELLO -->
+<!-- MENU -->
+<nav class="menu">
+  <a href="#" class="active">Home</a>
+  <a href="#">Lista Veicoli</a>
+  <a href="#">NoiAcquistiamoAutoRoma</a>
+  <a href="#">Assistenza</a>
+  <a href="#">Contatti</a>
+</nav>
+
+<!-- CAROSELLO -->
 <section class="hero">
   <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1549924231-f129b911e442')"></div>
   <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1617814076467-7f4e7e8cfc1e')"></div>
@@ -90,30 +89,55 @@
   </aside>
 </section>
 
+<!-- AUTO IN VENDITA -->
+<section class="cars">
+  <h2>Auto in vendita</h2>
+
+  <div class="car-grid">
+    <div class="car">
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+      <h4>Fiat 500 Hybrid</h4>
+      <p>2021 • 32.000 km</p>
+      <strong>€ 11.900</strong>
+    </div>
+
+    <div class="car">
+      <img src="https://images.unsplash.com/photo-1617814076467-7f4e7e8cfc1e">
+      <h4>Toyota Yaris</h4>
+      <p>2022 • 18.000 km</p>
+      <strong>€ 15.500</strong>
+    </div>
+
+    <div class="car">
+      <img src="https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8">
+      <h4>Volkswagen Polo</h4>
+      <p>2020 • 44.000 km</p>
+      <strong>€ 13.900</strong>
+    </div>
+  </div>
+</section>
+
 <!-- SERVIZI -->
 <section class="services">
   <div class="service">
     <img src="https://images.unsplash.com/photo-1589758438368-0ad531db3366">
     <h3>Finanziamenti</h3>
-    <p>Soluzioni personalizzate</p>
   </div>
 
   <div class="service">
     <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf">
     <h3>Officina</h3>
-    <p>Assistenza qualificata</p>
   </div>
 
   <div class="service">
     <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8">
     <h3>GPL & Metano</h3>
-    <p>Installazioni certificate</p>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <img src="https://i.imgur.com/4QZ7Z9K.png" class="footer-logo">
+<footer class="footer">
+  <img src="https://i.imgur.com/4QZ7Z9K.png">
 
   <p><strong>Assistenza e uffici</strong><br>
   Via della Pisana, 313 – Roma<br>
@@ -121,13 +145,16 @@
   Email: info@angelucciauto.it</p>
 
   <p class="small">
-    © AngelucciAuto – Privacy | Cookie Policy
+    Privacy | Cookie Policy | Impostazioni cookie
   </p>
 </footer>
+
+<a href="https://wa.me/393333402341" class="whatsapp" target="_blank">💬</a>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
