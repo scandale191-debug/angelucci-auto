@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>AngelucciAuto | Auto Usate Roma</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>AngelucciAuto | Auto Usate Roma</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,97 +14,106 @@
   <span>📞 +39 06 6615 2690</span>
 </div>
 
-<!-- HEADER -->
+<!-- HEADER LOGO -->
 <header class="header">
-  <img src="assets/images/logo.png" alt="AngelucciAuto" class="logo">
+  <img src="assets/images/logo.png" class="logo" alt="AngelucciAuto">
 </header>
 
 <!-- MENU -->
 <nav class="menu">
-  <ul>
-    <li><a href="#" class="active">Home</a></li>
-
-    <li class="dropdown">
-      <a href="#">Veicoli ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">City Car</a></li>
-        <li><a href="#">Utilitarie</a></li>
-        <li><a href="#">SUV</a></li>
-        <li><a href="#">Ibride</a></li>
-      </ul>
-    </li>
-
-    <li><a href="#vendita">Auto in Vendita</a></li>
-    <li><a href="#acquisto">Noi Acquistiamo Auto</a></li>
-    <li><a href="#contatti">Contatti</a></li>
-  </ul>
+  <a href="#" class="active">Home</a>
+  <a href="#veicoli">Lista Veicoli</a>
+  <a href="#acquisto">NoiAcquistiamoAutoRoma</a>
+  <a href="#assistenza">Assistenza</a>
+  <a href="#contatti">Contatti</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO CAROSELLO -->
 <section class="hero">
+  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8')"></div>
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1619767886558-efdc259cde1b')"></div>
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1617531653332-bd46c24f2068')"></div>
+
   <div class="hero-text">
     <h1>Auto Usate Garantite</h1>
-    <p>Qualità, affidabilità e trasparenza</p>
+    <p>Solo veicoli selezionati e controllati</p>
   </div>
 </section>
 
-<!-- AUTO IN VENDITA -->
-<section class="section" id="vendita">
-  <h2>Auto in Vendita</h2>
+<!-- RICERCA VEICOLI -->
+<section class="search">
+<h2>Ricerca veicoli</h2>
 
-  <div class="cars">
+<form class="search-form">
+  <select><option>Condizioni</option></select>
+  <select><option>Marchio</option></select>
+  <select><option>Modello</option></select>
+  <select><option>Alimentazione</option></select>
 
-    <div class="car">
-      <img src="https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8">
-      <div class="car-body">
-        <h3>Fiat Panda Hybrid</h3>
-        <p>2021 • 45.000 km • Benzina</p>
-        <span class="price">€ 8.900</span>
-      </div>
-    </div>
+  <select><option>Prezzo da</option></select>
+  <select><option>Prezzo a</option></select>
 
-    <div class="car">
-      <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1b">
-      <div class="car-body">
-        <h3>Toyota Yaris Hybrid</h3>
-        <p>2020 • 38.000 km • Ibrida</p>
-        <span class="price">€ 12.500</span>
-      </div>
-    </div>
+  <select><option>Anno da</option></select>
+  <select><option>Anno a</option></select>
 
-    <div class="car">
-      <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068">
-      <div class="car-body">
-        <h3>Fiat 500 Lounge</h3>
-        <p>2019 • 52.000 km • Benzina</p>
-        <span class="price">€ 10.900</span>
-      </div>
-    </div>
+  <select><option>Km da</option></select>
+  <select><option>Km a</option></select>
 
+  <button type="button">🔍 20 Veicoli</button>
+</form>
+</section>
+
+<!-- SERVIZI -->
+<section class="services">
+  <div class="service">
+    <h3>Finanziamenti</h3>
+    <p>Soluzioni personalizzate anche senza anticipo</p>
+  </div>
+
+  <div class="service" id="assistenza">
+    <h3>Officina</h3>
+    <p>Assistenza e manutenzione professionale</p>
+  </div>
+
+  <div class="service">
+    <h3>Installazione GPL</h3>
+    <p>Impianti certificati e garantiti</p>
   </div>
 </section>
 
-<!-- ACQUISTO AUTO -->
-<section class="section light" id="acquisto">
-  <h2>Noi Acquistiamo la tua Auto</h2>
-  <p>Valutazione immediata, pagamento sicuro e ritiro rapido</p>
-</section>
+<!-- FOOTER -->
+<footer class="footer" id="contatti">
 
-<!-- CONTATTI -->
-<section class="section" id="contatti">
-  <h2>Contatti</h2>
-  <p><strong>AngelucciAuto</strong></p>
-  <p>📍 Via dei Trivulzio, 9 – Roma</p>
-  <p>📞 +39 06 6615 2690</p>
-  <p>📧 info@angelucciauto.it</p>
-</section>
+<img src="assets/images/logo.png" class="footer-logo">
 
-<footer class="footer">
-  © 2026 AngelucciAuto – Tutti i diritti riservati
+<div class="footer-cols">
+
+<div>
+<h4>Assistenza e Uffici</h4>
+<p>Via della Pisana, 313<br>00163 Roma</p>
+<p>Tel: +39 06 6615 2690<br>Cell: +39 333 340 2341</p>
+<p>Email: info@angelucciauto.it</p>
+</div>
+
+<div>
+<h4>Esposizione Auto (solo su appuntamento)</h4>
+<p>Via dei Trivulzio, 9<br>00163 Roma</p>
+<p>Tel: +39 06 6615 2690</p>
+</div>
+
+</div>
+
+<div class="footer-links">
+<a href="#">Privacy</a> |
+<a href="#">Cookie Policy</a> |
+<a href="#">Impostazioni cookie</a>
+</div>
+
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
