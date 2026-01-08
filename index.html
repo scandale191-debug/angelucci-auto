@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>AngelucciAuto | Auto Usate Roma</title>
+<title>Angelucci Auto | Auto Usate Roma</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -10,110 +10,138 @@
 
 <!-- TOP BAR -->
 <div class="top-bar">
-  <span>📧 info@angelucciauto.it</span>
-  <span>📞 +39 06 6615 2690</span>
+  <span>info@angelucciauto.it</span>
+  <span>+39 06 6615 2690</span>
 </div>
 
 <!-- HEADER LOGO -->
 <header class="header">
-  <img src="assets/images/logo.png" class="logo" alt="AngelucciAuto">
+  <img src="assets/images/logo.png" alt="Angelucci Auto">
 </header>
 
-<!-- MENU -->
+<!-- MENU COME IL TUO -->
 <nav class="menu">
-  <a href="#" class="active">Home</a>
-  <a href="#veicoli">Lista Veicoli</a>
-  <a href="#acquisto">NoiAcquistiamoAutoRoma</a>
-  <a href="#assistenza">Assistenza</a>
-  <a href="#contatti">Contatti</a>
+  <a href="#" class="active">HOME</a>
+  <a href="#">LISTA VEICOLI</a>
+  <a href="#">SERVIZIO AUTORIZZATO LANCIA</a>
+  <a href="#">GPL E METANO</a>
+  <a href="#">ACQUISTIAMO USATO</a>
+  <a href="#">ASSISTENZA</a>
+  <a href="#">CONTATTI</a>
 </nav>
 
-<!-- HERO CAROSELLO -->
-<section class="hero">
-  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8')"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1619767886558-efdc259cde1b')"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1617531653332-bd46c24f2068')"></div>
+<!-- BLOCCO PRINCIPALE -->
+<section class="main">
 
-  <div class="hero-text">
-    <h1>Auto Usate Garantite</h1>
-    <p>Solo veicoli selezionati e controllati</p>
+  <!-- RICERCA VEICOLI -->
+  <aside class="search">
+    <h3>Ricerca veicoli</h3>
+
+    <label>Condizioni</label>
+    <select><option>Seleziona</option></select>
+
+    <label>Marchio</label>
+    <select><option>Seleziona</option></select>
+
+    <label>Modello</label>
+    <select><option>Selezionare prima una marca</option></select>
+
+    <label>Alimentazione</label>
+    <select><option>Seleziona</option></select>
+
+    <div class="row">
+      <div>
+        <label>Prezzo da</label>
+        <select><option>Seleziona</option></select>
+      </div>
+      <div>
+        <label>Prezzo a</label>
+        <select><option>Seleziona</option></select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label>Anno da</label>
+        <select><option>Seleziona</option></select>
+      </div>
+      <div>
+        <label>Anno a</label>
+        <select><option>Seleziona</option></select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label>Km da</label>
+        <select><option>Seleziona</option></select>
+      </div>
+      <div>
+        <label>Km a</label>
+        <select><option>Seleziona</option></select>
+      </div>
+    </div>
+
+    <button>🔍 20 Veicoli</button>
+  </aside>
+
+  <!-- CAROSELLO AUTO -->
+  <div class="carousel">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1619767886558-efdc259cde1b')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1617531653332-bd46c24f2068')"></div>
   </div>
-</section>
 
-<!-- RICERCA VEICOLI -->
-<section class="search">
-<h2>Ricerca veicoli</h2>
-
-<form class="search-form">
-  <select><option>Condizioni</option></select>
-  <select><option>Marchio</option></select>
-  <select><option>Modello</option></select>
-  <select><option>Alimentazione</option></select>
-
-  <select><option>Prezzo da</option></select>
-  <select><option>Prezzo a</option></select>
-
-  <select><option>Anno da</option></select>
-  <select><option>Anno a</option></select>
-
-  <select><option>Km da</option></select>
-  <select><option>Km a</option></select>
-
-  <button type="button">🔍 20 Veicoli</button>
-</form>
 </section>
 
 <!-- SERVIZI -->
 <section class="services">
+
   <div class="service">
+    <img src="https://images.unsplash.com/photo-1581092334394-3c09a3b3c3c0">
     <h3>Finanziamenti</h3>
-    <p>Soluzioni personalizzate anche senza anticipo</p>
-  </div>
-
-  <div class="service" id="assistenza">
-    <h3>Officina</h3>
-    <p>Assistenza e manutenzione professionale</p>
+    <p>Soluzioni personalizzate</p>
   </div>
 
   <div class="service">
-    <h3>Installazione GPL</h3>
-    <p>Impianti certificati e garantiti</p>
+    <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9">
+    <h3>Officina</h3>
+    <p>Assistenza qualificata</p>
   </div>
+
+  <div class="service">
+    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8">
+    <h3>Installazione GPL</h3>
+    <p>Impianti certificati</p>
+  </div>
+
 </section>
 
 <!-- FOOTER -->
-<footer class="footer" id="contatti">
+<footer class="footer">
+  <img src="assets/images/logo.png" class="footer-logo">
 
-<img src="assets/images/logo.png" class="footer-logo">
+  <p><strong>Assistenza e Uffici</strong><br>
+  Via della Pisana, 313 – Roma<br>
+  Tel: +39 06 6615 2690<br>
+  Cell: +39 333 340 2341<br>
+  Email: info@angelucciauto.it</p>
 
-<div class="footer-cols">
+  <p><strong>Esposizione auto (solo su appuntamento)</strong><br>
+  Via dei Trivulzio, 9 – Roma<br>
+  Tel: +39 06 6615 2690</p>
 
-<div>
-<h4>Assistenza e Uffici</h4>
-<p>Via della Pisana, 313<br>00163 Roma</p>
-<p>Tel: +39 06 6615 2690<br>Cell: +39 333 340 2341</p>
-<p>Email: info@angelucciauto.it</p>
-</div>
-
-<div>
-<h4>Esposizione Auto (solo su appuntamento)</h4>
-<p>Via dei Trivulzio, 9<br>00163 Roma</p>
-<p>Tel: +39 06 6615 2690</p>
-</div>
-
-</div>
-
-<div class="footer-links">
-<a href="#">Privacy</a> |
-<a href="#">Cookie Policy</a> |
-<a href="#">Impostazioni cookie</a>
-</div>
-
+  <div class="footer-links">
+    <a href="#">Privacy</a> |
+    <a href="#">Cookie Policy</a> |
+    <a href="#">Impostazioni cookie</a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
