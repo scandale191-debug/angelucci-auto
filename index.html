@@ -1,128 +1,227 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Angelucci Auto | Auto Usate Roma</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angelucci Auto | Auto Usate Roma</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* ===================== PARTE ALTA (NUOVA) ===================== */
+.top-bar{
+  background:#eee;
+  padding:6px 20px;
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+}
+.header{
+  background:#777;
+  padding:10px 20px;
+}
+.logo img{height:70px;}
+.menu{
+  background:#d32f2f;
+  display:flex;
+  justify-content:center;
+}
+.menu a{
+  color:#fff;
+  padding:15px 20px;
+  text-decoration:none;
+  font-weight:bold;
+}
+.menu a:hover{background:#b71c1c;}
+.hero{
+  position:relative;
+  height:420px;
+  overflow:hidden;
+}
+.slide{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:opacity 1s;
+}
+.slide.active{opacity:1;}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+.vehicle-section{
+  display:flex;
+  gap:30px;
+  padding:40px;
+}
+.vehicle-menu{
+  width:260px;
+  background:#f5f5f5;
+  padding:20px;
+}
+.vehicle-menu select,
+.vehicle-menu button{
+  width:100%;
+  margin-bottom:10px;
+  padding:8px;
+}
+.vehicle-list{
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.vehicle-card{
+  border:1px solid #ddd;
+}
+.vehicle-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+.vehicle-card h4{padding:10px 10px 0;}
+.vehicle-card p{padding:0 10px 10px;font-weight:bold;}
+
+/* ===================== PARTE TUA (IDENTICA) ===================== */
+.contacts-section {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+.contacts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.contact-info,
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+}
+.footer {
+  background:#111;
+  color:white;
+  padding:30px;
+  text-align:center;
+}
+</style>
 </head>
+
 <body>
 
-<!-- TOP BAR -->
+<!-- ===================== PARTE ALTA ===================== -->
+
 <div class="top-bar">
   <span>info@angelucciauto.it</span>
   <span>+39 06 6615 2690</span>
 </div>
 
-<!-- HEADER -->
 <header class="header">
   <div class="logo">
-    <!-- Sostituisci src con il tuo logo -->
     <img src="https://i.imgur.com/4QZ7Z9K.png" alt="Angelucci Auto">
   </div>
 </header>
 
-<!-- MENU -->
 <nav class="menu">
-  <a href="#" class="active">Home</a>
+  <a href="#">Home</a>
   <a href="#">Lista Veicoli</a>
   <a href="#">NoiAcquistiamoAutoRoma</a>
   <a href="#">Assistenza</a>
   <a href="#">Contatti</a>
 </nav>
 
-<!-- HERO / CAROSELLO -->
 <section class="hero">
-  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1549924231-f129b911e442');"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1617814076467-7f4e7e8cfc1e');"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8');"></div>
+  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1549924231-f129b911e442')"></div>
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1617814076467-7f4e7e8cfc1e')"></div>
+  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8')"></div>
 
   <div class="hero-overlay">
     <h1>Auto Usate Garantite</h1>
-    <p>Qualità, sicurezza e assistenza completa</p>
+    <p>Vendita • Assistenza • Finanziamenti</p>
   </div>
 </section>
 
-<!-- RICERCA VEICOLI ORIZZONTALE -->
-<section class="search-horizontal">
-  <select><option>Condizione</option></select>
-  <select><option>Marchio</option></select>
-  <select><option>Modello</option></select>
-  <select><option>Alimentazione</option></select>
-  <select><option>Prezzo da</option></select>
-  <select><option>Prezzo a</option></select>
-  <select><option>Anno da</option></select>
-  <select><option>Anno a</option></select>
-  <select><option>Km da</option></select>
-  <select><option>Km a</option></select>
-  <button>🔍 20 Veicoli</button>
-</section>
+<section class="vehicle-section">
+  <aside class="vehicle-menu">
+    <h3>Ricerca Veicoli</h3>
+    <select><option>Marchio</option></select>
+    <select><option>Modello</option></select>
+    <select><option>Alimentazione</option></select>
+    <select><option>Prezzo max</option></select>
+    <button>Cerca</button>
+  </aside>
 
-<!-- AUTO IN VENDITA -->
-<section class="cars">
-  <h2>Auto in Vendita</h2>
-
-  <div class="car-grid">
-    <div class="car">
+  <div class="vehicle-list">
+    <div class="vehicle-card">
       <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
       <h4>Fiat 500 Hybrid</h4>
-      <p>2021 • 32.000 km</p>
-      <strong>€ 11.900</strong>
+      <p>€ 11.900</p>
     </div>
-
-    <div class="car">
+    <div class="vehicle-card">
       <img src="https://images.unsplash.com/photo-1617814076467-7f4e7e8cfc1e">
       <h4>Toyota Yaris</h4>
-      <p>2022 • 18.000 km</p>
-      <strong>€ 15.500</strong>
+      <p>€ 15.500</p>
     </div>
-
-    <div class="car">
+    <div class="vehicle-card">
       <img src="https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8">
       <h4>Volkswagen Polo</h4>
-      <p>2020 • 44.000 km</p>
-      <strong>€ 13.900</strong>
+      <p>€ 13.900</p>
     </div>
   </div>
 </section>
 
-<!-- SERVIZI -->
-<section class="services">
-  <div class="service">
-    <img src="https://images.unsplash.com/photo-1589758438368-0ad531db3366">
-    <h3>Finanziamenti</h3>
-  </div>
+<!-- ===================== PARTE TUA (CONTATTI + FOOTER) ===================== -->
 
-  <div class="service">
-    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf">
-    <h3>Officina</h3>
-  </div>
+<section class="contacts-section">
+  <div class="container">
+    <h1>Contattaci</h1>
 
-  <div class="service">
-    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8">
-    <h3>GPL & Metano</h3>
+    <div class="contacts-container">
+      <div class="contact-info">
+        <h2>Informazioni di Contatto</h2>
+        <p><strong>Uffici:</strong> Via della Pisana, 313 – Roma</p>
+        <p><strong>Tel:</strong> +39 06 6615 2690</p>
+        <p><strong>Email:</strong> info@angelucciauto.it</p>
+      </div>
+
+      <div class="contact-form">
+        <h2>Inviaci un Messaggio</h2>
+        <form>
+          <input type="text" placeholder="Nome" required><br><br>
+          <input type="email" placeholder="Email" required><br><br>
+          <textarea placeholder="Messaggio"></textarea><br><br>
+          <button type="submit">Invia</button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER (COME IL TUO CODICE) -->
 <footer class="footer">
-  <p><strong>Assistenza e uffici</strong><br>
-    Via della Pisana, 313 – Roma<br>
-    Tel: +39 06 6615 2690<br>
-    Email: info@angelucciauto.it
-  </p>
-
-  <p><strong>Esposizione auto</strong><br>
-    Via dei Trivulzio, 9 – Roma<br>
-    Solo su appuntamento
-  </p>
-
-  <p class="small">
-    Privacy Policy | Cookie Policy | Impostazioni Cookie
-  </p>
+  <p>Via della Pisana, 313 – Roma | Via dei Trivulzio 9 (su appuntamento)</p>
+  <p>Privacy Policy – Cookie Policy – Impostazioni Cookie</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+const slides=document.querySelectorAll('.slide');
+let i=0;
+setInterval(()=>{
+  slides[i].classList.remove('active');
+  i=(i+1)%slides.length;
+  slides[i].classList.add('active');
+},4000);
+</script>
+
 </body>
 </html>
 
