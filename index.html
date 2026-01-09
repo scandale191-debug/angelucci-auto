@@ -14,12 +14,13 @@
 <!-- HEADER -->
 <header class="header">
   <div class="container header-flex">
-    <img src="assets/images/logo.png" class="logo-img" alt="Angelucci Auto">
-
+    <img src="assets/images/logo.png" class="logo-img">
     <nav class="nav-menu">
-      <a href="index.html" class="active">Home</a>
+      <a class="active">Home</a>
       <a href="lista-veicoli.html">Lista Veicoli</a>
-      <a href="#">Acquistiamo Auto</a>
+      <a>Acquistiamo Usato</a>
+      <a>GPL e Metano</a>
+      <a>Assistenza</a>
       <a href="contatti.html">Contatti</a>
     </nav>
   </div>
@@ -27,28 +28,59 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-slider">
-    <img src="assets/images/fiatpanda.png" class="slide active">
-    <img src="assets/images/fiat500.png" class="slide">
-    <img src="assets/images/yaris.png" class="slide">
+  <div class="hero-wrapper">
 
-    <button class="arrow left" onclick="prevSlide()">❮</button>
-    <button class="arrow right" onclick="nextSlide()">❯</button>
-  </div>
-</section>
+    <!-- CAROSELLO -->
+    <div class="hero-slider">
+      <img src="assets/images/fiatpanda.png" class="slide active">
+      <img src="assets/images/fiat500.png" class="slide">
+      <img src="assets/images/yaris.png" class="slide">
 
-<!-- FILTRI VEICOLI -->
-<section class="filters">
-  <h2>Lista Auto in Vendita</h2>
+      <button class="arrow left" onclick="prevSlide()">❮</button>
+      <button class="arrow right" onclick="nextSlide()">❯</button>
+    </div>
 
-  <div class="filter-bar">
-    <select><option>Marca</option></select>
-    <select><option>Modello</option></select>
-    <select><option>Alimentazione</option></select>
-    <select><option>Prezzo max</option></select>
-    <select><option>Anno</option></select>
-    <select><option>Km</option></select>
-    <button>Cerca</button>
+    <!-- RICERCA VEICOLI -->
+    <div class="search-box">
+      <h3>Ricerca veicoli</h3>
+
+      <label>Condizioni</label>
+      <select><option>Seleziona</option></select>
+
+      <label>Marchio</label>
+      <select><option>Seleziona</option></select>
+
+      <label>Modello</label>
+      <select><option>Selezionare prima una marca</option></select>
+
+      <label>Alimentazione</label>
+      <select><option>Seleziona</option></select>
+
+      <div class="double">
+        <div>
+          <label>Prezzo da</label>
+          <select><option>Seleziona</option></select>
+        </div>
+        <div>
+          <label>Prezzo a</label>
+          <select><option>Seleziona</option></select>
+        </div>
+      </div>
+
+      <div class="double">
+        <div>
+          <label>Anno da</label>
+          <select><option>Seleziona</option></select>
+        </div>
+        <div>
+          <label>Anno a</label>
+          <select><option>Seleziona</option></select>
+        </div>
+      </div>
+
+      <button class="search-btn">Cerca veicoli</button>
+    </div>
+
   </div>
 </section>
 
@@ -58,13 +90,11 @@
 
   <div class="featured-slider">
     <button class="arrow left" onclick="scrollFeatured(-1)">❮</button>
-
     <div class="featured-track">
       <img src="assets/images/fiatpanda.png">
       <img src="assets/images/fiat500.png">
       <img src="assets/images/yaris.png">
     </div>
-
     <button class="arrow right" onclick="scrollFeatured(1)">❯</button>
   </div>
 </section>
@@ -77,13 +107,13 @@
     <div class="service-card">
       <img src="assets/images/servizi-finanziamenti.jpg">
       <h3>Finanziamenti</h3>
-      <p>Soluzioni personalizzate e rapide.</p>
+      <p>Soluzioni su misura anche senza anticipo.</p>
     </div>
 
     <div class="service-card">
       <img src="assets/images/servizi-gpl.jpg">
-      <h3>Impianti GPL</h3>
-      <p>Risparmio fino al 60%.</p>
+      <h3>GPL e Metano</h3>
+      <p>Impianti certificati e garantiti.</p>
     </div>
 
     <div class="service-card">
@@ -101,5 +131,6 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
