@@ -1,229 +1,103 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Angelucci Auto | Auto Usate Roma</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelucci Auto - Vendita Auto Usate Roma</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-<style>
-/* ===================== PARTE ALTA (NUOVA) ===================== */
-.top-bar{
-  background:#eee;
-  padding:6px 20px;
-  display:flex;
-  justify-content:space-between;
-  font-size:14px;
-}
-.header{
-  background:#777;
-  padding:10px 20px;
-}
-.logo img{height:70px;}
-.menu{
-  background:#d32f2f;
-  display:flex;
-  justify-content:center;
-}
-.menu a{
-  color:#fff;
-  padding:15px 20px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.menu a:hover{background:#b71c1c;}
-.hero{
-  position:relative;
-  height:420px;
-  overflow:hidden;
-}
-.slide{
-  position:absolute;
-  width:100%;
-  height:100%;
-  background-size:cover;
-  background-position:center;
-  opacity:0;
-  transition:opacity 1s;
-}
-.slide.active{opacity:1;}
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,0.4);
-  color:#fff;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-}
-.vehicle-section{
-  display:flex;
-  gap:30px;
-  padding:40px;
-}
-.vehicle-menu{
-  width:260px;
-  background:#f5f5f5;
-  padding:20px;
-}
-.vehicle-menu select,
-.vehicle-menu button{
-  width:100%;
-  margin-bottom:10px;
-  padding:8px;
-}
-.vehicle-list{
-  flex:1;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
-}
-.vehicle-card{
-  border:1px solid #ddd;
-}
-.vehicle-card img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-}
-.vehicle-card h4{padding:10px 10px 0;}
-.vehicle-card p{padding:0 10px 10px;font-weight:bold;}
-
-/* ===================== PARTE TUA (IDENTICA) ===================== */
-.contacts-section {
-  padding: 50px 0;
-  background-color: #f5f5f5;
-}
-.contacts-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-.contact-info,
-.contact-form {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-}
-.footer {
-  background:#111;
-  color:white;
-  padding:30px;
-  text-align:center;
-}
-</style>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
 
-<!-- ===================== PARTE ALTA ===================== -->
-
-<div class="top-bar">
-  <span>info@angelucciauto.it</span>
-  <span>+39 06 6615 2690</span>
-</div>
-
 <header class="header">
-  <div class="logo">
-    <img src="https://i.imgur.com/4QZ7Z9K.png" alt="Angelucci Auto">
-  </div>
+    <div class="container header-content">
+        <div class="logo">
+            <i class="fas fa-car"></i>
+            <span>Angelucci Auto</span>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="lista-veicoli.html" class="nav-link">Lista Veicoli</a>
+            <a href="#" class="nav-link">Noi Acquistiamo Auto Roma</a>
+            <a href="contatti.html" class="nav-link">Contatti</a>
+        </nav>
+    </div>
 </header>
 
-<nav class="menu">
-  <a href="#">Home</a>
-  <a href="#">Lista Veicoli</a>
-  <a href="#">NoiAcquistiamoAutoRoma</a>
-  <a href="#">Assistenza</a>
-  <a href="#">Contatti</a>
-</nav>
-
+<!-- HERO + CAROSELLO -->
 <section class="hero">
-  <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1549924231-f129b911e442')"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1617814076467-7f4e7e8cfc1e')"></div>
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8')"></div>
+    <div class="carousel">
 
-  <div class="hero-overlay">
-    <h1>Auto Usate Garantite</h1>
-    <p>Vendita • Assistenza • Finanziamenti</p>
-  </div>
+        <div class="carousel-item active">
+            <div class="carousel-image" style="background-image:url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738');"></div>
+            <div class="carousel-content">
+                <h2>Fiat Panda 1.2</h2>
+                <p>2020 • 45.000 km • Benzina</p>
+                <span class="carousel-price">€ 8.500</span>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="carousel-image" style="background-image:url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');"></div>
+            <div class="carousel-content">
+                <h2>Ford Focus 1.5 TDCi</h2>
+                <p>2019 • 62.000 km • Diesel</p>
+                <span class="carousel-price">€ 12.500</span>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <div class="carousel-image" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');"></div>
+            <div class="carousel-content">
+                <h2>Volkswagen Golf GPL</h2>
+                <p>2018 • 78.000 km • GPL</p>
+                <span class="carousel-price">€ 9.800</span>
+            </div>
+        </div>
+
+        <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+        <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+    </div>
 </section>
 
-<section class="vehicle-section">
-  <aside class="vehicle-menu">
-    <h3>Ricerca Veicoli</h3>
-    <select><option>Marchio</option></select>
-    <select><option>Modello</option></select>
-    <select><option>Alimentazione</option></select>
-    <select><option>Prezzo max</option></select>
-    <button>Cerca</button>
-  </aside>
+<!-- SERVIZI -->
+<section class="services">
+    <div class="container services-grid">
 
-  <div class="vehicle-list">
-    <div class="vehicle-card">
-      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
-      <h4>Fiat 500 Hybrid</h4>
-      <p>€ 11.900</p>
+        <div class="service-box">
+            <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f" alt="Finanziamenti auto">
+            <h3>Finanziamenti</h3>
+            <p>Soluzioni personalizzate con rate comode.</p>
+        </div>
+
+        <div class="service-box">
+            <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2" alt="Impianto GPL">
+            <h3>Impianti GPL</h3>
+            <p>Risparmia sul carburante fino al 60%.</p>
+        </div>
+
+        <div class="service-box">
+            <img src="https://images.unsplash.com/photo-1597008641621-7c79e9a0c1c5" alt="Officina auto">
+            <h3>Officina</h3>
+            <p>Assistenza e manutenzione professionale.</p>
+        </div>
+
     </div>
-    <div class="vehicle-card">
-      <img src="https://images.unsplash.com/photo-1617814076467-7f4e7e8cfc1e">
-      <h4>Toyota Yaris</h4>
-      <p>€ 15.500</p>
-    </div>
-    <div class="vehicle-card">
-      <img src="https://images.unsplash.com/photo-1605559424843-9f9d5a2c94b8">
-      <h4>Volkswagen Polo</h4>
-      <p>€ 13.900</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== PARTE TUA (CONTATTI + FOOTER) ===================== -->
-
-<section class="contacts-section">
-  <div class="container">
-    <h1>Contattaci</h1>
-
-    <div class="contacts-container">
-      <div class="contact-info">
-        <h2>Informazioni di Contatto</h2>
-        <p><strong>Uffici:</strong> Via della Pisana, 313 – Roma</p>
-        <p><strong>Tel:</strong> +39 06 6615 2690</p>
-        <p><strong>Email:</strong> info@angelucciauto.it</p>
-      </div>
-
-      <div class="contact-form">
-        <h2>Inviaci un Messaggio</h2>
-        <form>
-          <input type="text" placeholder="Nome" required><br><br>
-          <input type="email" placeholder="Email" required><br><br>
-          <textarea placeholder="Messaggio"></textarea><br><br>
-          <button type="submit">Invia</button>
-        </form>
-      </div>
-    </div>
-  </div>
 </section>
 
 <footer class="footer">
-  <p>Via della Pisana, 313 – Roma | Via dei Trivulzio 9 (su appuntamento)</p>
-  <p>Privacy Policy – Cookie Policy – Impostazioni Cookie</p>
+    <p>© 2026 Angelucci Auto – Tutti i diritti riservati</p>
 </footer>
 
-<script>
-const slides=document.querySelectorAll('.slide');
-let i=0;
-setInterval(()=>{
-  slides[i].classList.remove('active');
-  i=(i+1)%slides.length;
-  slides[i].classList.add('active');
-},4000);
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
+
 
 
 
