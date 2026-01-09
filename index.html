@@ -31,12 +31,44 @@
 <!-- HERO / CAROSELLO -->
 <section class="hero">
     <div class="carousel">
+
         <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');"></div>
-        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');"></div>
+
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1542362567-b07e54358753');"></div>
+
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d');"></div>
 
         <button class="nav prev" onclick="changeSlide(-1)">❮</button>
         <button class="nav next" onclick="changeSlide(1)">❯</button>
+    </div>
+</section>
+
+<!-- MENU SCELTA VEICOLO -->
+<section class="filter">
+    <div class="container filter-grid">
+        <select>
+            <option>Marca</option>
+            <option>Fiat</option>
+            <option>Toyota</option>
+            <option>Volkswagen</option>
+        </select>
+
+        <select>
+            <option>Alimentazione</option>
+            <option>Benzina</option>
+            <option>Diesel</option>
+            <option>GPL</option>
+            <option>Ibrida</option>
+        </select>
+
+        <select>
+            <option>Prezzo max</option>
+            <option>5.000 €</option>
+            <option>10.000 €</option>
+            <option>20.000 €</option>
+        </select>
+
+        <button>Cerca veicolo</button>
     </div>
 </section>
 
@@ -48,7 +80,7 @@
 
         <div class="car-card">
             <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
-            <h3>Fiat Panda 1.2</h3>
+            <h3>Fiat Panda</h3>
             <p>2020 · Benzina · 45.000 km</p>
             <span>€ 8.500</span>
         </div>
@@ -85,19 +117,18 @@
         <div class="service-box">
             <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2">
             <h3>Impianti GPL</h3>
-            <p>Installazioni certificate e risparmio garantito.</p>
+            <p>Installazione e collaudo certificato.</p>
         </div>
 
         <div class="service-box">
             <img src="https://images.unsplash.com/photo-1597008641621-7c79e9a0c1c5">
             <h3>Officina</h3>
-            <p>Manutenzione e assistenza specializzata.</p>
+            <p>Assistenza e manutenzione specializzata.</p>
         </div>
 
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
     <p>© 2026 Angelucci Auto – Tutti i diritti riservati</p>
 </footer>
@@ -105,10 +136,6 @@
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
 
 
 
