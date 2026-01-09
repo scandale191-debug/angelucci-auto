@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angelucci Auto - Vendita Auto Usate Roma</title>
+    <title>Angelucci Auto | Vendita Auto Usate Roma</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
     <div class="container header-content">
         <div class="logo">
@@ -21,75 +19,85 @@
         </div>
 
         <nav class="nav-menu">
-            <a href="index.html" class="nav-link active">Home</a>
-            <a href="lista-veicoli.html" class="nav-link">Lista Veicoli</a>
-            <a href="#" class="nav-link">Noi Acquistiamo Auto Roma</a>
-            <a href="contatti.html" class="nav-link">Contatti</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="lista-veicoli.html">Lista Veicoli</a>
+            <a href="#">Noi Acquistiamo Auto Roma</a>
+            <a href="assistenza.html">Assistenza</a>
+            <a href="contatti.html">Contatti</a>
         </nav>
     </div>
 </header>
 
-<!-- HERO + CAROSELLO -->
+<!-- HERO / CAROSELLO -->
 <section class="hero">
     <div class="carousel">
+        <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738');"></div>
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');"></div>
+        <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');"></div>
 
-        <div class="carousel-item active">
-            <div class="carousel-image" style="background-image:url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738');"></div>
-            <div class="carousel-content">
-                <h2>Fiat Panda 1.2</h2>
-                <p>2020 • 45.000 km • Benzina</p>
-                <span class="carousel-price">€ 8.500</span>
-            </div>
+        <button class="nav prev" onclick="changeSlide(-1)">❮</button>
+        <button class="nav next" onclick="changeSlide(1)">❯</button>
+    </div>
+</section>
+
+<!-- AUTO IN EVIDENZA -->
+<section class="featured">
+    <h2>Auto in Evidenza</h2>
+
+    <div class="cars-grid container">
+
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+            <h3>Fiat Panda 1.2</h3>
+            <p>2020 · Benzina · 45.000 km</p>
+            <span>€ 8.500</span>
         </div>
 
-        <div class="carousel-item">
-            <div class="carousel-image" style="background-image:url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a');"></div>
-            <div class="carousel-content">
-                <h2>Ford Focus 1.5 TDCi</h2>
-                <p>2019 • 62.000 km • Diesel</p>
-                <span class="carousel-price">€ 12.500</span>
-            </div>
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1542362567-b07e54358753">
+            <h3>Toyota Yaris</h3>
+            <p>2021 · Ibrida · 32.000 km</p>
+            <span>€ 13.900</span>
         </div>
 
-        <div class="carousel-item">
-            <div class="carousel-image" style="background-image:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');"></div>
-            <div class="carousel-content">
-                <h2>Volkswagen Golf GPL</h2>
-                <p>2018 • 78.000 km • GPL</p>
-                <span class="carousel-price">€ 9.800</span>
-            </div>
+        <div class="car-card">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
+            <h3>Volkswagen Golf</h3>
+            <p>2019 · GPL · 78.000 km</p>
+            <span>€ 9.800</span>
         </div>
 
-        <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
-        <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
     </div>
 </section>
 
 <!-- SERVIZI -->
 <section class="services">
-    <div class="container services-grid">
+    <h2>I nostri servizi</h2>
+
+    <div class="services-grid container">
 
         <div class="service-box">
-            <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f" alt="Finanziamenti auto">
+            <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367f">
             <h3>Finanziamenti</h3>
-            <p>Soluzioni personalizzate con rate comode.</p>
+            <p>Rate personalizzate e approvazioni rapide.</p>
         </div>
 
         <div class="service-box">
-            <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2" alt="Impianto GPL">
+            <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2">
             <h3>Impianti GPL</h3>
-            <p>Risparmia sul carburante fino al 60%.</p>
+            <p>Installazioni certificate e risparmio garantito.</p>
         </div>
 
         <div class="service-box">
-            <img src="https://images.unsplash.com/photo-1597008641621-7c79e9a0c1c5" alt="Officina auto">
+            <img src="https://images.unsplash.com/photo-1597008641621-7c79e9a0c1c5">
             <h3>Officina</h3>
-            <p>Assistenza e manutenzione professionale.</p>
+            <p>Manutenzione e assistenza specializzata.</p>
         </div>
 
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
     <p>© 2026 Angelucci Auto – Tutti i diritti riservati</p>
 </footer>
@@ -97,6 +105,7 @@
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
