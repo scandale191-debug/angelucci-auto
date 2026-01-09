@@ -1,10 +1,17 @@
-let index = 0;
+let slideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 
-function changeSlide(step){
-    slides[index].classList.remove('active');
-    index = (index + step + slides.length) % slides.length;
-    slides[index].classList.add('active');
-}
+setInterval(()=>{
+  slides[slideIndex].classList.remove('active');
+  slideIndex = (slideIndex + 1) % slides.length;
+  slides[slideIndex].classList.add('active');
+},6000);
 
-setInterval(()=>changeSlide(1),7000);
+const cars = document.getElementById("cars");
+let offset = 0;
+
+function scrollCars(dir){
+  offset += dir * 280;
+  offset = Math.max(Math.min(offset,0), -560);
+  cars.style.transform = `translateX(${offset}px)`;
+}
