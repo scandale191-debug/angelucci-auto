@@ -1,17 +1,21 @@
 let slideIndex = 0;
-const slides = document.querySelectorAll('.slide');
+const slides = document.querySelectorAll(".slide");
 
-setInterval(()=>{
-  slides[slideIndex].classList.remove('active');
-  slideIndex = (slideIndex + 1) % slides.length;
-  slides[slideIndex].classList.add('active');
-},6000);
+function showSlide(i){
+slides.forEach(s=>s.classList.remove("active"));
+slides[i].classList.add("active");
+}
+function nextSlide(){
+slideIndex=(slideIndex+1)%slides.length;
+showSlide(slideIndex);
+}
+function prevSlide(){
+slideIndex=(slideIndex-1+slides.length)%slides.length;
+showSlide(slideIndex);
+}
+setInterval(nextSlide,5000);
 
-const cars = document.getElementById("cars");
-let offset = 0;
-
-function scrollCars(dir){
-  offset += dir * 280;
-  offset = Math.max(Math.min(offset,0), -560);
-  cars.style.transform = `translateX(${offset}px)`;
+const track=document.querySelector(".featured-track");
+function scrollFeatured(dir){
+track.scrollBy({left:dir*500,behavior:"smooth"});
 }
