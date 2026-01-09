@@ -1,17 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
+let index = 0;
 
-  /* ================= CAROSELLO HERO ================= */
-  const slides = document.querySelectorAll(".slide");
-  let currentSlide = 0;
+function changeSlide(step) {
+    const slides = document.querySelectorAll('.carousel-item');
+    slides[index].classList.remove('active');
+    index = (index + step + slides.length) % slides.length;
+    slides[index].classList.add('active');
+}
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove("active"));
-    slides[index].classList.add("active");
-  }
-
-  setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-  }, 4000);
-
-});
+setInterval(() => changeSlide(1), 6000);
