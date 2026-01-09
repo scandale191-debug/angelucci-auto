@@ -2,198 +2,99 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<title>Angelucci Auto</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angelucci Auto - Vendita Auto Usate Roma</title>
 
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-body{margin:0;font-family:Arial,sans-serif;background:#f5f5f5}
-.container{width:90%;max-width:1400px;margin:auto}
-
-/* HEADER */
-.topbar{background:#fff;padding:25px 0;border-bottom:4px solid #d32f2f}
-.topbar .container{display:flex;align-items:center;justify-content:space-between}
-.logo img{height:90px}
-nav a{margin:0 15px;text-decoration:none;color:#111;font-weight:bold}
-nav a:hover{color:#d32f2f}
-
-/* HERO */
-.hero{position:relative;height:520px;overflow:hidden}
-.carousel{height:100%;position:relative}
-.slide{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 1s}
-.slide.active{opacity:1}
-.slide img{width:100%;height:100%;object-fit:cover}
-
-/* FRECCE */
-.arrow{position:absolute;top:50%;transform:translateY(-50%);
-background:rgba(0,0,0,0.5);color:#fff;font-size:30px;
-padding:15px;cursor:pointer;z-index:10}
-.arrow.left{left:20px}
-.arrow.right{right:20px}
-
-/* AUTO IN EVIDENZA */
-.section-title{text-align:center;margin:60px 0 30px;font-size:32px;color:#111}
-.featured-cars{display:flex;overflow:hidden}
-.featured-track{display:flex;transition:transform .5s}
-.featured-car{min-width:33.33%;padding:10px}
-.featured-car img{width:100%;border-radius:10px}
-
-/* MENU VEICOLI */
-.vehicle-menu{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:40px 0}
-.vehicle-menu select{
-padding:12px 15px;
-border-radius:6px;
-border:1px solid #ccc;
-font-size:14px
-}
-.vehicle-menu button{
-padding:12px 25px;
-background:#d32f2f;
-color:#fff;
-border:none;
-border-radius:6px;
-font-weight:bold;
-cursor:pointer
-}
-
-/* SERVIZI */
-.services{background:#fff;padding:60px 0}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
-.service-box{background:#f9f9f9;border-radius:10px;overflow:hidden;text-align:center}
-.service-box img{width:100%;height:220px;object-fit:cover}
-.service-box h3{padding:15px;color:#d32f2f}
-
-/* FOOTER */
-footer{background:#111;color:#fff;padding:40px 0}
-.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-footer a{color:#fff;text-decoration:none}
-.footer-bottom{text-align:center;margin-top:30px;font-size:14px;color:#ccc}
-
-@media(max-width:900px){
-.services-grid,.footer-grid{grid-template-columns:1fr}
-.featured-car{min-width:100%}
-}
-</style>
 </head>
 
 <body>
 
 <!-- HEADER -->
-<div class="topbar">
-  <div class="container">
-    <div class="logo">
-      <img src="logo.png" alt="Angelucci Auto">
-    </div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Lista Veicoli</a>
-      <a href="#">Noi Acquistiamo Auto Roma</a>
-      <a href="#">Assistenza</a>
-      <a href="#">Contatti</a>
+<header class="header">
+  <div class="container header-flex">
+    <img src="assets/images/logo.png" class="logo-img" alt="Angelucci Auto">
+    <nav class="nav-menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="lista-veicoli.html">Lista Veicoli</a>
+      <a href="#">Acquistiamo Auto</a>
+      <a href="contatti.html">Contatti</a>
     </nav>
   </div>
-</div>
+</header>
 
-<!-- HERO CAROSELLO -->
-<div class="hero">
-  <div class="carousel">
-    <div class="slide active"><img src="fiatpanda.jpg"></div>
-    <div class="slide"><img src="fiat500.jpg"></div>
-    <div class="slide"><img src="yaris.jpg"></div>
+<!-- HERO / CAROSELLO -->
+<section class="hero">
+  <div class="hero-slider">
+    <img src="assets/images/fiatpanda.png" class="slide active">
+    <img src="assets/images/fiat500.png" class="slide">
+    <img src="assets/images/yaris.png" class="slide">
 
-    <div class="arrow left" onclick="prevSlide()">❮</div>
-    <div class="arrow right" onclick="nextSlide()">❯</div>
+    <button class="arrow left" onclick="prevSlide()">❮</button>
+    <button class="arrow right" onclick="nextSlide()">❯</button>
   </div>
-</div>
+</section>
+
+<!-- MENU FILTRI -->
+<section class="filters">
+  <h2>Lista Auto in Vendita</h2>
+  <div class="filter-bar">
+    <select><option>Marca</option></select>
+    <select><option>Carburante</option></select>
+    <select><option>Prezzo Max</option></select>
+    <button>Cerca</button>
+  </div>
+</section>
 
 <!-- AUTO IN EVIDENZA -->
-<h2 class="section-title">AUTO IN EVIDENZA</h2>
+<section class="featured">
+  <h2>Auto in Evidenza</h2>
 
-<div class="featured-cars">
-  <div class="featured-track" id="featuredTrack">
-    <div class="featured-car"><img src="fiatpanda.jpg"></div>
-    <div class="featured-car"><img src="fiat500.jpg"></div>
-    <div class="featured-car"><img src="yaris.jpg"></div>
+  <div class="featured-slider">
+    <button class="arrow left" onclick="scrollFeatured(-1)">❮</button>
+
+    <div class="featured-track">
+      <img src="assets/images/fiatpanda.png">
+      <img src="assets/images/fiat500.png">
+      <img src="assets/images/yaris.png">
+    </div>
+
+    <button class="arrow right" onclick="scrollFeatured(1)">❯</button>
   </div>
-</div>
-
-<!-- MENU LISTA VEICOLI -->
-<div class="vehicle-menu container">
-  <select><option>Condizioni</option></select>
-  <select><option>Marca</option></select>
-  <select><option>Modello</option></select>
-  <select><option>Alimentazione</option></select>
-  <select><option>Prezzo da</option></select>
-  <select><option>Prezzo a</option></select>
-  <button>20 VEICOLI</button>
-</div>
+</section>
 
 <!-- SERVIZI -->
 <section class="services">
-  <div class="container">
-    <h2 class="section-title">I NOSTRI SERVIZI</h2>
-    <div class="services-grid">
-      <div class="service-box">
-        <img src="servizi-finanziamenti.jpg">
-        <h3>Finanziamenti Personalizzati</h3>
-      </div>
-      <div class="service-box">
-        <img src="servizi-officina.jpg">
-        <h3>Officina Specializzata</h3>
-      </div>
-      <div class="service-box">
-        <img src="servizi-gpl.jpg">
-        <h3>Installazione GPL</h3>
-      </div>
+  <h2>I Nostri Servizi</h2>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="assets/images/servizi-finanziamenti.jpg">
+      <h3>Finanziamenti</h3>
+      <p>Soluzioni personalizzate e tassi agevolati.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/images/servizi-gpl.jpg">
+      <h3>Auto GPL</h3>
+      <p>Risparmio e affidabilità garantiti.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/images/servizi-officina.jpg">
+      <h3>Officina</h3>
+      <p>Assistenza completa e professionale.</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <h4>Angelucci Auto</h4>
-      <p>Via della Pisana, 313<br>00163 Roma</p>
-    </div>
-    <div>
-      <h4>Contatti</h4>
-      <p>Tel: 06 66152690<br>Cell: 333 3402341</p>
-    </div>
-    <div>
-      <h4>Email</h4>
-      <p>info@angelucciauto.it</p>
-    </div>
-    <div>
-      <h4>Esposizione</h4>
-      <p>Via dei Trivulzio 9<br>Solo su appuntamento</p>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2026 Angelucci Auto – Privacy – Cookie
-  </div>
+<footer class="footer">
+  <p>© 2026 Angelucci Auto - Tutti i diritti riservati</p>
 </footer>
 
-<script>
-let slideIndex=0;
-const slides=document.querySelectorAll('.slide');
-
-function showSlide(i){
-  slides.forEach(s=>s.classList.remove('active'));
-  slides[i].classList.add('active');
-}
-
-function nextSlide(){
-  slideIndex=(slideIndex+1)%slides.length;
-  showSlide(slideIndex);
-}
-function prevSlide(){
-  slideIndex=(slideIndex-1+slides.length)%slides.length;
-  showSlide(slideIndex);
-}
-setInterval(nextSlide,5000);
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
+
